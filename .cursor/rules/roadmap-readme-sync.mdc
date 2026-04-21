@@ -1,0 +1,35 @@
+---
+description: Keep README roadmap checkboxes in sync with RoadmapView UI (progress + stage states).
+globs: "{README.md,src/views/RoadmapView.vue}"
+alwaysApply: false
+---
+
+# README ↔ RoadmapView synchronization
+
+When editing either `README.md` or `src/views/RoadmapView.vue`, keep them **1:1 consistent** regarding learning progress.
+
+## What must stay in sync
+
+- **Stage completion**: If a stage is checked in `README.md` (`[X]`), the same stage must appear as **completed** in `RoadmapView.vue`.
+- **Current stage**: If a stage is the current focus, mark it as such consistently in both places.
+- **Progress numbers**: Update the progress label (e.g. `4 / 7`) and the progress bar percent (e.g. `w-[57%]`) based on completed stages in `README.md`.
+
+## Mapping rules (source of truth)
+
+- Treat `README.md` as the **source of truth** for which stages are complete.
+- Stages are ordered 1→7 and should match titles between README and UI.
+
+## Update procedure
+
+If the user checks/unchecks stages in `README.md`:
+- Update `src/views/RoadmapView.vue`:
+  - Completed stages: use the completed visual treatment (check icon + highlighted border).
+  - Future stages: keep the “dimmed” treatment.
+  - Current stage: keep the “Current Stage” badge on the active one.
+  - Recompute progress: \(completed / 7\) → percentage (rounded to whole number) and update:
+    - text label `X / 7 Stages (YY%)`
+    - bar width class `w-[YY%]`
+
+If the user changes stage content/titles in either file:
+- Mirror the same wording in the other file so the roadmap reads identically.
+
