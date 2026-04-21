@@ -27,13 +27,13 @@ Celem tego planu jest opanowanie Vue 3, Pinia, TailwindCSS oraz TypeScript w kon
 - **Tematy:** props / emits, podział na komponenty, lifecycle hooks (onMounted), slots.
 - **Mini projekt:** Appka z listą użytkowników (lista, szczegóły użytkownika, sensowny podział na komponenty).
 
-### [ ] Etap 3: Vite + TailwindCSS (Dzień 5)
+### [X] Etap 3: Vite + TailwindCSS (Dzień 5)
 
 - **Cel:** Szybkie UI.
 - **Tematy:** setup Vite + Vue, instalacja Tailwind, utility-first CSS.
 - **Mini zadanie:** Ostylowanie wcześniejszego projektu Todo / Users list.
 
-### [ ] Etap 4: Routing (Vue Router) (Dzień 6)
+### [X] Etap 4: Routing (Vue Router) (Dzień 6)
 
 - **Cel:** Tworzenie SPA.
 - **Tematy:** router, params, layouty.

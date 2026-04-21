@@ -1,9 +1,7 @@
 <script setup>
-import Counter from './components/Counter.vue'
-import List from './components/componentsBasics/List.vue'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <!-- <Counter /> -->
-  <List />
+  <RouterView />
 </template>
